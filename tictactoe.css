@@ -1,86 +1,27 @@
 .game_board{
-	width: 650px;
-	height: 1250px;
+	width: 700px;
+	height: 1300px;
 }
 
 
-#box1{
+.typeA{
 	width: 200px;
 	height: 200px;
-	border-right: 10px solid black;
-	border-bottom: 10px solid black;
-	float: left;
-	background-color: #fcd59c;
-}
-
-#box2{
-	width: 200px;
-	height: 200px;
-	border-bottom: 10px solid black;
-	float: left;
-	background-color: #cc7722;
-}
-
-#box3{
-	width: 200px;
-	height: 200px;
-	border-left: 10px solid black;
-	border-bottom: 10px solid black;
-	float: left;
-	background-color: #fcd59c;
-}
-
-#box4{
-		width: 200px;
-	height: 200px;
-	border-right: 10px solid black;
-	border-bottom: 10px solid black;
-	float: left;
-	background-color: #cc7722;
-}
-
-#box5{
-		width: 200px;
-	height: 200px;
-	border-right: 10px solid black;
-	border-bottom: 10px solid black;
-	float: left;
-	background-color: #fcd59c;
-}
-
-#box6{
-		width: 200px;
-	height: 200px;
+	border: 10px solid black;
 	
-	border-bottom: 10px solid black;
+	float: left;
+	background-color: #fcd59c;
+}
+
+.typeB{
+	width: 200px;
+	height: 200px;
+	border: 10px solid black;
 	float: left;
 	background-color: #cc7722;
 }
 
-#box7{
-		width: 200px;
-	height: 200px;
-	border-right: 10px solid black;
-	float: left;
-	background-color: #fcd59c;
 
-}
-
-#box8{
-		width: 200px;
-	height: 200px;
-	border-right: 10px solid black;
-	float: left;
-	background-color: #cc7722;
-
-}
-
-#box9{
-		width: 200px;
-	height: 200px;
-	float: left;
-	background-color: #fcd59c;
-}
 
 .typeA:active{
 	background-color: rgba(0,0,0,.75);
