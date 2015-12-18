@@ -1,6 +1,6 @@
 "use strict";
 
-  var body = $('body'); 
+
 
  (function () {
    var game_slate = [
@@ -23,40 +23,50 @@
    var box8 = $("#box8"); 
    var box9 = $("#box9"); 
 
-   var typeA = $(".typeA");
 
-   var whosTurn = 1;
+   var gameBoard = $(".game_board");
+
+  
+
+   var playerTurn = 1;
 
 
-   var move;
+  
 
 
-   $('.abox').click(function(){
-   	if (this.classList.contains('hasBeenPicked') == false){
-	   	if (whosTurn === 1){
+      $('.abox').click(function(){
+   	   if (this.classList.contains('hasBeenPicked') == false){
+	   	if (playerTurn === 1){
 	   		var playerSun = $("<div class='Sun'></div>");
 	   		$(this).addClass('hasBeenPicked')
 	     	$(this).append(playerSun);
-   			whosTurn = 2
+   			playerTurn = 2
 	   	}else{
 			var playerMoon = $("<div class='Moon'></div>");
 			$(this).addClass('hasBeenPicked')
 	     	$(this).append(playerMoon); 
-	     	whosTurn = 1
+	     	playerTurn = 1
 	   	}
   
 
    	}
 
- 
 
-   
-
+      
 
 
 
 
-   })
+  })
+
+   // function checkForWinner(){
+   //          var winner = 0;
+   //        if(game_board).find('#box1').hasClass('row1 col1') && 
+   //               (game_board).find('#box2').hasClass('row1 col2') &&
+   //               (game_board).find('#box3').hasClass('row1 col3')){
+   //            console.log("Winner is one!");
+   //          }
+   //       }
 
 
      // $(box1).on('click' , function(){

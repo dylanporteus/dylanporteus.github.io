@@ -1,6 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Bevan);
+
+
 .game_board{
 	width: 700px;
-	height: 1300px;
+	height: 700px;
+}
+
+h1{
+	text-decoration: underline;
+	text-align: left;
+	font-family: Bevan;
+	color: #bf5fff;
+	font-size: 50pt;
+	background: rgba(0,0,40,0.75);
 }
 
 
@@ -53,6 +65,15 @@
 	width: 180px;
 	background-repeat: no-repeat;
 
+}
+
+.newGame_btn{
+	height: 30px;
+	width: 75px;
+	font-family: Verdana;
+	border: 5px solid black;
+	float: left;
+	position: absolute;
 }
 
 
