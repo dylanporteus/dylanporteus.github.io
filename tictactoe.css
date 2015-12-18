@@ -68,12 +68,12 @@ h1{
 }
 
 .newGame_btn{
-	height: 30px;
-	width: 75px;
+
 	font-family: Verdana;
 	border: 5px solid black;
-	float: left;
+	overflow: hidden;
 	position: absolute;
+
 }
 
 
