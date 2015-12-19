@@ -87,6 +87,9 @@
             return 'Sun';
            }else if(count === -3){
             return 'Moon';
+           }else if(movesCount === 9 && count !== 3 && count !== -3){
+            
+            return 'Tie!';
            }
         }//end of i for loop
 
@@ -107,6 +110,9 @@
               return 'Sun';
            }else if(count === -3){
             return 'Moon';
+           }else if(movesCount === 9 && count !== 3 && count !== -3){
+            
+            return 'Tie!';
            }
         }//end of i for loop
         
@@ -128,6 +134,9 @@
            $('div' ,game_slate[1][1]).hasClass('Moon') &&
            $('div' ,game_slate[2][0]).hasClass('Moon')){
              return 'Moon';
+        }else if(movesCount === 9 && count !== 3 && count !== -3){
+           
+          return 'Tie!';
         }
        
       };
@@ -137,29 +146,29 @@
         if(movesCount >= 5){
           if(checkRows() !== undefined){
             console.log(checkRows())
-            return docOverlay(); //return "" + wins.
+            // return docOverlay(); //return "" + wins.
           }else if(checkCols() !== undefined){
-             return docOverlay();
+             // return docOverlay();
             // return "hello" ; //return "" + wins.
 
           }else if(checkDiag() !== undefined){
             console.log(checkDiag())
-             return docOverlay(); //return "" + wins.
+             // return docOverlay(); //return "" + wins.
           }
         }
 
 
       };
             
-        var docOverlay = function(){
-          $(document).height();
+        // var docOverlay = function(){
+        //   $(document).height();
 
-        $("body").append("<div id='overlay'></div>");
+        // $("body").append("<div id='overlay'></div>");
 
-         $("#overlay").height(docOverlay)
+        //  $("#overlay").height(docOverlay);
          
 
-          }
+        //   }
 
       })();
 
