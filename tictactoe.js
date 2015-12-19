@@ -29,7 +29,7 @@
    ];
 
 
-   var gameBoard = $(".game_board");
+ 
 
   
 
@@ -137,18 +137,29 @@
         if(movesCount >= 5){
           if(checkRows() !== undefined){
             console.log(checkRows())
-            return checkRows();
+            return docOverlay(); //return "" + wins.
           }else if(checkCols() !== undefined){
-            console.log(checkCols())
-            return checkCols(); //return "" + wins.
+             return docOverlay();
+            // return "hello" ; //return "" + wins.
 
           }else if(checkDiag() !== undefined){
             console.log(checkDiag())
-            return checkDiag(); //return "" + wins.
+             return docOverlay(); //return "" + wins.
           }
         }
 
+
       };
+            
+        var docOverlay = function(){
+          $(document).height();
+
+        $("body").append("<div id='overlay'></div>");
+
+         $("#overlay").height(docOverlay)
+         
+
+          }
 
       })();
 
