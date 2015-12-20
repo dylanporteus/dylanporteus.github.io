@@ -141,34 +141,47 @@
        
       };
 
-     var getWinner = function(){
-      console.log('getwinner called')
-        if(movesCount >= 5){
-          if(checkRows() !== undefined){
-            console.log(checkRows())
-            // return docOverlay(); //return "" + wins.
-          }else if(checkCols() !== undefined){
-             // return docOverlay();
-            // return "hello" ; //return "" + wins.
-
-          }else if(checkDiag() !== undefined){
-            console.log(checkDiag())
-             // return docOverlay(); //return "" + wins.
-          }
-        }
-
-
-      };
 
       var declareWinner = function(){
-         var winner = getWinner();
-        $('.end_game').text(winner + 'wins!').css({
+        
+        var winner = getWinner();
+
+     
+        $('.end_game').text(+winner+ "wins!").css({
           'font-family' : 'Bevan',
           'color' : 'black',
            'font-size' : '25px'
         });
       }
+  
+
+     var getWinner = function(){
+      console.log('getwinner called')
+        if(movesCount >= 5){
+          if(checkRows() !== undefined){
+             var winner = checkRows();
+             // console.log("checkrows: winner is "+winner+"");
+             return winner
             
+          }else if(checkCols() !== undefined){
+            var winner = checkCols();
+             // console.log("checkcols: winner is "+winner+"");
+            return winner
+
+          }else if(checkDiag() !== undefined){
+              var winner = checkDiag();
+              //console.log("checkDiag: winner is "+winner+"");
+            return winner
+          }
+          
+        }
+       
+         
+      };
+
+      
+
+
         // var docOverlay = function(){
         //   $(document).height();
 
@@ -180,6 +193,7 @@
         //   }
 
       })();
+
 
 
 
