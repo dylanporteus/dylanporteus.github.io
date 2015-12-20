@@ -172,21 +172,26 @@
    var declareWinner = function(){
         
         var winner = getWinner();
+        console.log(winner)
 
      
        var finMsg = $('.end_game')
-       finMsg.append($("<div class='message'>")).text(+winner+ " wins!").css({
+       finMsg.append($("<div class='message'>"))
+       finMsg.text(""+winner+ " wins!")
+       finMsg.css({
           'font-family' : 'Bevan',
           'color' : 'black',
            'font-size' : '25px'
         });
+
       }
       
       
 
 
-
+ declareWinner();
       })();
+
 
 
 
