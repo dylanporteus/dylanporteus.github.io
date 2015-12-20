@@ -89,7 +89,7 @@
             return 'Night';
            }else if(movesCount === 9 && count !== 3 && count !== -3){
             
-            return 'Tie!';
+            return 'Neither';
            }
         }//end of i for loop
 
@@ -112,7 +112,7 @@
             return 'Night';
            }else if(movesCount === 9 && count !== 3 && count !== -3){
             
-            return 'Tie!';
+            return 'Neither';
            }
         }//end of i for loop
         
@@ -136,7 +136,7 @@
              return 'Night';
         }else if(movesCount === 9 && count !== 3 && count !== -3){
            
-          return 'Tie!';
+          return 'Neither';
         }
        
       };
@@ -164,6 +164,7 @@
               var winner = checkDiag();
               //console.log("checkDiag: winner is "+winner+"");
               declareWinner(winner);
+               docOverlay();
             return winner
           }
           
@@ -200,15 +201,15 @@
 
 
 
-        // var docOverlay = function(){
-        //   $(document).height();
+          // var docOverlay = function(){
+          //   $(document).height();
 
-        // $("body").append("<div id='overlay'></div>");
+          // $("body").append("<div id='overlay'></div>");
 
-        //  $("#overlay").height(docOverlay);
+          //  $("#overlay").height(docOverlay);
          
 
-        //   }
+          //   }
 
 
 
