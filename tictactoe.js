@@ -84,9 +84,9 @@
           }//end of k for loop
           console.log('row ' + i + ' has count ' + count);
            if(count === 3){
-            return 'Sun';
+            return 'Day';
            }else if(count === -3){
-            return 'Moon';
+            return 'Night';
            }else if(movesCount === 9 && count !== 3 && count !== -3){
             
             return 'Tie!';
@@ -107,9 +107,9 @@
             }
           }//end of k for loop
            if(count === 3){
-              return 'Sun';
+              return 'Day';
            }else if(count === -3){
-            return 'Moon';
+            return 'Night';
            }else if(movesCount === 9 && count !== 3 && count !== -3){
             
             return 'Tie!';
@@ -126,14 +126,14 @@
            $('div' ,game_slate[0][2]).hasClass('Sun') &&
            $('div' ,game_slate[1][1]).hasClass('Sun') &&
            $('div' ,game_slate[2][0]).hasClass('Sun')){
-             return 'Sun';
+             return 'Day';
         }else if($('div' ,game_slate[0][0]).hasClass('Moon') &&
            $('div' ,game_slate[1][1]).hasClass('Moon') &&
            $('div' ,game_slate[2][2]).hasClass('Moon') ||
            $('div' ,game_slate[0][2]).hasClass('Moon') &&
            $('div' ,game_slate[1][1]).hasClass('Moon') &&
            $('div' ,game_slate[2][0]).hasClass('Moon')){
-             return 'Moon';
+             return 'Night';
         }else if(movesCount === 9 && count !== 3 && count !== -3){
            
           return 'Tie!';
@@ -151,16 +151,19 @@
           if(checkRows() !== undefined){
              var winner = checkRows();
              // console.log("checkrows: winner is "+winner+"");
+             declareWinner(winner);
              return winner
             
           }else if(checkCols() !== undefined){
             var winner = checkCols();
              // console.log("checkcols: winner is "+winner+"");
+             declareWinner(winner);
             return winner
 
           }else if(checkDiag() !== undefined){
               var winner = checkDiag();
               //console.log("checkDiag: winner is "+winner+"");
+              declareWinner(winner);
             return winner
           }
           
@@ -169,19 +172,19 @@
          
       };
 
-   var declareWinner = function(){
+   var declareWinner = function(winner){
         
-        var winner = getWinner();
-        console.log(winner)
+       
+      
 
      
        var finMsg = $('.end_game')
        finMsg.append($("<div class='message'>"))
-       finMsg.text(""+winner+ " wins!")
+       finMsg.text("**" +winner+ " wins!**")
        finMsg.css({
           'font-family' : 'Bevan',
-          'color' : 'black',
-           'font-size' : '25px'
+          'color' : 'teal',
+           'font-size' : '35px'
         });
 
       }
@@ -189,7 +192,7 @@
       
 
 
- declareWinner();
+ 
       })();
 
 
