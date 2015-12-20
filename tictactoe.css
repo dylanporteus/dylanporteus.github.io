@@ -28,7 +28,7 @@ h1{
 	width: 200px;
 	height: 200px;
 	border: 10px solid black;
-	
+	margin: auto;
 	float: left;
 	background-color: #fcd59c;
 }
@@ -37,6 +37,7 @@ h1{
 	width: 200px;
 	height: 200px;
 	border: 10px solid black;
+	margin: auto;
 	float: left;
 	background-color: #cc7722;
 }
@@ -75,14 +76,14 @@ h1{
 
 }
 
-.newGame_btn{
+/*.newGame_btn{
 
 	font-family: Verdana;
 	border: 5px solid black;
 	overflow: hidden;
 	position: absolute;
 
-}
+}*/
 
 #overlay {
 
