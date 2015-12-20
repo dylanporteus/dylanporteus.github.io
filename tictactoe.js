@@ -147,7 +147,7 @@
         var winner = getWinner();
 
      
-        $('.end_game').text(+winner+ "wins!").css({
+        $('.end_game').text(+winner+ " wins!").css({
           'font-family' : 'Bevan',
           'color' : 'black',
            'font-size' : '25px'
@@ -182,6 +182,12 @@
       
 
 
+
+      })();
+
+
+
+
         // var docOverlay = function(){
         //   $(document).height();
 
@@ -191,12 +197,6 @@
          
 
         //   }
-
-      })();
-
-
-
-
 
 
 
