@@ -1,0 +1,8 @@
+#Tic Tac Toe#
+
+
+This is a Tic Tac Toe game! It is meant for two players, 
+that will be represented by the Sun(x) and the Moon (o). 
+Clicking any square in the game board will make the respective player's icon appear. 
+In order to win, a player must line up 3 of their icon 
+in a row, column, or diagonal, or else there will be a Tie.
