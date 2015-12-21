@@ -7,6 +7,8 @@
    
 
    
+   var overlay = $('#overlay')
+
 
  
 
@@ -38,7 +40,7 @@
    var movesCount = 0;
 
 
-  
+  overlay.hide();
 
 
       $('.abox').click(function(){
@@ -179,17 +181,17 @@
       
 
      
-       var finMsg = $('.end_game')
+       var finMsg = $('#overlay')
        finMsg.append($("<div class='message'>"))
        finMsg.text("**" +winner+ " wins!**")
        finMsg.css({
           'font-family' : 'Bevan',
-          'color' : 'teal',
-           'font-size' : '35px'
+          'color' : 'silver',
+           'font-size' : '150px'
         });
-
+         overlay.show();
       }
-      
+       
       
 
 
